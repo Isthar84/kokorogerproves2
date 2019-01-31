@@ -316,8 +316,13 @@ class audio(_Response):
                                       push_buffer=False,
                                       opaque_token=opaque_token)
         audio_item['stream']['expectedPreviousToken'] = current_stream.token
+        metadata = {}
+        metadata['title'] = 'Titol de prova'
+        metadata['subtitle'] = 'Subtitol de prova'
+        
 
         directive['audioItem'] = audio_item
+        directive['metadata'] = metadata
         self._response['directives'].append(directive)
         return self
 
