@@ -1,1 +1,4 @@
-
+gunicorn
+kodi-voice>=1.1.3
+pymongo
+cryptography==2.1.4
