@@ -305,6 +305,10 @@ class audio(_Response):
         self._response['shouldEndSession'] = True
         directive = self._play_directive('REPLACE_ALL')
         directive['audioItem'] = self._audio_item(stream_url=stream_url, offset=offset, opaque_token=opaque_token)
+        metadata = {}
+        metadata['title'] = 'Titol de prova'
+        metadata['subtitle'] = 'Subtitol de prova'
+        directive['metadata'] = metadata
         self._response['directives'].append(directive)
         return self
 
